@@ -12,22 +12,26 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-image: url('your-background-image.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
         }
         canvas {
             border: 1px solid black;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the canvas */
         }
-        #score {
+        #score, #timer {
             font-size: 24px;
             margin-top: 20px;
+            color: white; /* Ensure text is readable against the background */
         }
     </style>
 </head>
 <body>
-    <h1>Candy Counting Game</h1>
+    <h1 style="color: white;">Candy Counting Game</h1> <!-- Ensure the title is readable -->
     <canvas id="gameCanvas" width="400" height="600"></canvas>
     <div id="score">Candies Collected: 0</div>
+    <div id="timer">Time Left: 60s</div>
     <script src="game.js"></script>
 </body>
 </html>
